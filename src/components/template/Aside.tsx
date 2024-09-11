@@ -1,38 +1,31 @@
-import { VscAccount } from "react-icons/vsc";
-import { VscCode } from "react-icons/vsc";
-import { VscSearch } from "react-icons/vsc";
-import { VscFiles } from "react-icons/vsc";
-import { VscGithub } from "react-icons/vsc";
-import { VscSettingsGear } from "react-icons/vsc";
-
-import { FaFolderOpen, FaHtml5, FaCss3, FaJsSquare, FaGithub, FaReact, FaFileCode } from "react-icons/fa";
+import Link from 'next/link';
+import { VscAccount, VscCode, VscSearch, VscFiles, VscGithub, VscSettingsGear } from "react-icons/vsc";
+import { FaFolderOpen, FaHtml5, FaCss3, FaJsSquare, FaGithub, FaReact } from "react-icons/fa";
 import { LuFileJson } from "react-icons/lu";
-
-
 
 export default function Nav() {
     return (
-        <aside className="flex  ">
-            <div className="hidden md:w-16 md:bg-gray-900 md:flex md:flex-col md:items-center md:py-4 md:space-y-6 md:border-gray-800 md:border-r md:float-left  ">
-                <a href="/">
+        <aside className="flex">
+            <div className="hidden md:w-16 md:bg-gray-900 md:flex md:flex-col md:items-center md:py-4 md:space-y-6 md:border-gray-800 md:border-r md:float-left">
+                <Link href="/" passHref>
                     <VscFiles className="w-6 h-6 text-gray-400 hover:text-sky-300" />
-                </a>
-                <a href="/contact">
+                </Link>
+                <Link href="/contact" passHref>
                     <VscSearch className="w-6 h-6 text-gray-400 hover:text-sky-300" />
-                </a>
-                <a href="/github">
+                </Link>
+                <Link href="/github" passHref>
                     <VscGithub className="w-6 h-6 text-gray-400 hover:text-sky-300" />
-                </a>
-                <a href="/code">
+                </Link>
+                <Link href="/code" passHref>
                     <VscCode className="w-6 h-6 text-gray-400 hover:text-sky-300" />
-                </a>
+                </Link>
                 <div className="flex flex-col items-center space-y-6 absolute bottom-2 pb-2">
-                    <a href="/curriculum">
+                    <Link href="/curriculum" passHref>
                         <VscAccount className="w-6 h-6 text-gray-400 hover:text-sky-300" />
-                    </a>
-                    <a href="/settings">
+                    </Link>
+                    <Link href="/settings" passHref>
                         <VscSettingsGear className="w-6 h-6 text-gray-400 hover:text-sky-300" />
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="w-64 bg-gray-900 hidden md:block">
@@ -112,6 +105,3 @@ export default function Nav() {
         </aside>
     );
 }
-
-
-
