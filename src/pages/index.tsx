@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -19,8 +18,8 @@ const Home = () => {
       <div className="flex flex-col items-center justify-center mt-4">
         <h3 className="text-md text-gray-200 mb-2">Hard Skills:</h3>
         <p className="text-gray-400 text-center">
-          Web Development &nbsp; | &nbsp; JavaScript / TypeScript / Node.js &nbsp; | &nbsp; React <br />
-          Bot (Python) &nbsp; | &nbsp; Java &nbsp; | &nbsp; Git / GitHub
+          Web Development  |  JavaScript / TypeScript / Node.js  |  React <br />
+          Bot (Python)  |  Java  |  Git / GitHub
         </p>
       </div>
 
@@ -35,3 +34,4 @@ const Home = () => {
 }
 
 export default Home;
+
