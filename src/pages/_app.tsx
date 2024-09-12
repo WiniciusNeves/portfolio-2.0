@@ -19,38 +19,38 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
 
-    <div className="relative flex flex-col h-screen">
+    <div className="relative w-screen flex flex-col h-screen">
 
 
       {/* Header no topo, z-index mais alto */}
-      <Header className="relative z-10" />
+      <Header className="relative " />
 
-      <div className="relative flex flex-grow z-10">
+      <div className="relative flex flex-grow ">
         {/* Aside à esquerda, z-index mais alto */}
-        <Aside className="relative z-10" />
+        <Aside className="relative " />
 
-        <div className="relative flex flex-col w-full z-10">
+        <div className="relative flex flex-col w-full ">
           {/* Nav abaixo do Header, ao lado do Aside, z-index mais alto */}
           <Nav className="relative " />
 
+          <div className=" flex flex-grow  ">
+            <Main>
+              <Component {...pageProps} />
+            </Main>
+          </div>
           {/* Renderiza o Console apenas em páginas específicas */}
           {!noConsoleRoutes.includes(router.pathname) && (
-            <div className="fixed bottom-8 w-full flex justify-center">
-              <Console className="relative z-10" />
+            <div className="relative  w-full flex justify-center">
+              <Console className="relative " />
             </div>
           )}
         </div>
       </div>
 
       {/* Footer na parte inferior, z-index mais alto */}
-      <Footer className="relative z-10" />
+      <Footer className="relative " />
 
       {/* Main content atrás de tudo (z-index mais baixo) */}
-      <div className="absolute inset-0 flex flex-grow -z-10 ">
-        <Main>
-          <Component {...pageProps} />
-        </Main>
-      </div>
     </div>
   );
 }

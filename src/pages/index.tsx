@@ -2,36 +2,41 @@ import Image from 'next/image';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-purple-950" style={{ height: '55rem', width: '100vw' }}>
-      {/* Nome e foto do perfil */}
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-3xl text-gray-300 mb-4">Winicius Neves</h1>
-        <Image src="/img/profile.jpg" alt="foto" width={150} height={150} className="rounded-full" />
+    <div className="flex flex-col items-center justify-center bg-purple-950 h-full text-gray-300">
+      <div className="flex flex-row items-center justify-center space-x-10">
+
+        {/* Profile Picture and Name */}
+        <div className="flex flex-col items-center">
+          <img className=" "
+            src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=999999&multiline=true&repeat=false&random=false&width=435&height=50&lines=Winicius+Neves"
+            alt="Typing SVG" />
+          <Image src="/img/profile.jpg" alt="foto" width={150} height={150} className="rounded-full mb-4" />
+        </div>
+
+        {/* Majoring Info and Hard Skills */}
+          <div className="flex flex-col items-center">
+        <img id="typing"
+          src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=21&duration=4500&pause=1000&color=5DBB9B&center=true&vCenter=true&repeat=false&random=false&width=435&lines=Majoring+in+Computer+Science"
+          alt="Typing SVG" />
+        <h3 className="text-lg mt-2">Hard Skills:</h3>
+          <div className="flex flex-wrap justify-center mt-2 space-x-4">
+            <span>Web Development</span>
+            <span>JavaScript / TypeScript / Node.js</span>
+            <span>React</span>
+            <span>Bot (Python)</span>
+            <span>Java</span>
+            <span>Git / GitHub</span>
+          </div>
+        </div>
       </div>
 
-      {/* Curso */}
-      <div className="flex flex-col items-center justify-center mt-4">
-        <h2 className="text-lg text-teal-400">Majoring in Computer Science</h2>
-      </div>
-
-      {/* Hard Skills */}
-      <div className="flex flex-col items-center justify-center mt-4">
-        <h3 className="text-md text-gray-200 mb-2">Hard Skills:</h3>
-        <p className="text-gray-400 text-center">
-          Web Development  |  JavaScript / TypeScript / Node.js  |  React <br />
-          Bot (Python)  |  Java  |  Git / GitHub
-        </p>
-      </div>
-
-      {/* Botões */}
-      <div className="flex justify-around w-1/2 mt-8">
-        <button className="border-2 border-gray-400 rounded-md py-2 px-4 text-gray-300 hover:bg-gray-800 transition">Curriculum</button>
-        <button className="border-2 border-gray-400 rounded-md py-2 px-4 text-gray-300 hover:bg-gray-800 transition">Contact Me</button>
+      {/* Buttons for Curriculum and Contact Me */}
+      <div className="flex space-x-10 mt-8">
+        <button className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-600">Curriculum</button>
+        <button className="px-4 py-2 bg-gray-700 rounded-full hover:bg-gray-600">Contact Me</button>
       </div>
     </div>
-
-  )
+  );
 }
 
 export default Home;
-
