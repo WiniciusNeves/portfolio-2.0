@@ -26,10 +26,12 @@
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  
- 
+
+
+
 
 }
+
 
 
 span {
@@ -41,10 +43,10 @@ span:hover {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;     
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }

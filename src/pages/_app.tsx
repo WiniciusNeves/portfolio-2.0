@@ -8,12 +8,13 @@ import Main from "@/components/template/Main";
 import Footer from "@/components/template/Footer";
 import Console from "@/components/template/Console";
 
+
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const is404 = router.pathname === "/404";
 
   // Rotas em que você NÃO quer que o Console apareça
-  const noConsoleRoutes = ["/404",]; // Adicione as rotas onde não deseja o Console
+  const noConsoleRoutes = ["/404", "/curriculum", "/contact", "/github", "/projects"]; // Adicione as rotas onde não deseja o Console
 
   if (is404) return <Component {...pageProps} />;
 
