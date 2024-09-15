@@ -1,4 +1,4 @@
-export default function NavAbas({ propagateServerField }) {
+export default function NavAbas({ propagateServerField }: any) {
     return (
         <div className="w-1/3">
             <button className="w-full ">
