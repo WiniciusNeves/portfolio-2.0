@@ -28,7 +28,7 @@ export default function Nav() {
                     </Link>
                 </div>
             </div>
-            <div className="w-64 bg-gray-900 hidden md:block">
+            <div className="w-64 bg-gray-900 hidden lg:block">
                 <h4 className="text-gray-100">Explorador</h4>
                 <div className="h-1/7 border-gray-800 border-b">
                     <h5 className="text-gray-400">Open Editors</h5>
