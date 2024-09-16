@@ -5,7 +5,7 @@ import { LuFileJson } from "react-icons/lu";
 
 export default function Nav() {
     return (
-        <aside className="flex border-gray-800 md:border-r">
+        <aside className="flex border-gray-800 md:border-r ">
             <div className="hidden md:w-16 md:bg-gray-900 md:flex md:flex-col md:items-center md:py-4 md:space-y-6 md:border-gray-800 md:border-r md:float-left">
                 <Link href="/" passHref>
                     <VscFiles className="w-6 h-6 text-gray-400 hover:text-sky-300" />
@@ -16,7 +16,7 @@ export default function Nav() {
                 <Link href="/github" passHref>
                     <VscGithub className="w-6 h-6 text-gray-400 hover:text-sky-300" />
                 </Link>
-                <Link href="/code" passHref>
+                <Link href="/projects" passHref>
                     <VscCode className="w-6 h-6 text-gray-400 hover:text-sky-300" />
                 </Link>
                 <div className="flex flex-col items-center space-y-6 absolute bottom-2 pb-2">

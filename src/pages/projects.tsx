@@ -3,14 +3,14 @@ import Box from "@/components/common/Box";
 
 export default function Project() {
     return (
-        <div className="bg-gray-900 text-gray-300 overflow-y-auto w-full " style={{ maxHeight: "87vh" }}>
-            <div className="flex flex-col space-y-6 md:m-4">
-                <List propagateServerField={{ title: "Projects" }}>
+        <div className="bg-gray-900 text-gray-300 overflow-y-auto w-full flex justify-center " style={{ maxHeight: "87vh" }}>
+            <div className="flex flex-col space-y-6 md:m-4 h-full">
+                <List propagateServerField={{ title: "Web Development Projects (Html/CSS/JS)" }}>
                     <Box
                         propagateServerField={{
-                            title: "Portfolio",
+                            title: "Portfolio (old)",
                             content: "This is my portfolio, where I showcase my projects and skills.",
-                            link: "https://github.com/WiniciusNeves/portfolio-2.0",
+                            link: "https://github.com/WiniciusNeves/portfolio",
                         }}
                     />
                     <Box
@@ -31,7 +31,24 @@ export default function Project() {
                         propagateServerField={{
                             title: "OLX Clone",
                             content: "A clone of OLX built with PHP and MySQL.",
-                            link: "https://github.com/WiniciusNeves/olx-clone",
+                            link: "https://github.com/WiniciusNeves/Project_OLX",
+                        }}
+                    />
+                </List>
+
+                <List propagateServerField={{ title: "React/Next Projects" }}>
+                    <Box
+                        propagateServerField={{
+                            title: "Portfolio",
+                            content: "This is my portfolio, where I showcase my projects and skills.",
+                            link: "https://github.com/WiniciusNeves/portfolio",
+                        }}
+                    />
+                    <Box
+                        propagateServerField={{
+                            title: "UniSearch",
+                            content: "University search engine built with React.nativo",
+                            link: "https://github.com/WiniciusNeves/UniSearch",
                         }}
                     />
                 </List>
@@ -64,7 +81,7 @@ export default function Project() {
                     <Box
                         propagateServerField={{
                             title: "College",
-                            content: "College application made with Java.",
+                            content: "College application made with Java and PHP.",
                             link: "https://github.com/WiniciusNeves/college",
                         }}
                     />

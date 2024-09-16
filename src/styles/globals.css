@@ -27,12 +27,7 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 
-
-
-
 }
-
-
 
 span {
   margin-left: 8px;

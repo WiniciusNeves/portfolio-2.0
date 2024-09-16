@@ -14,7 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
   const is404 = router.pathname === "/404";
 
   // Rotas em que você NÃO quer que o Console apareça
-  const noConsoleRoutes = ["/404", "/curriculum", "/contact", "/github", "/projects"]; // Adicione as rotas onde não deseja o Console
+  const noConsoleRoutes = ["/404", "/curriculum", "/contact", "/github", "/projects"];
+  const noAsideRoutes = ["/projects" , "/github"];
 
   if (is404) return <Component {...pageProps} />;
 
@@ -24,15 +25,19 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
       {/* Header no topo, z-index mais alto */}
-      <Header className="relative " />
+      <Header/>
 
       <div className="relative flex flex-grow ">
-        {/* Aside à esquerda, z-index mais alto */}
-        <Aside className="relative " />
+        {!noAsideRoutes.includes(router.pathname) && (
+          <div className="relative flex flex-grow">
+            <Aside />
+
+          </div>
+        )}
 
         <div className="relative flex flex-col w-full ">
           {/* Nav abaixo do Header, ao lado do Aside, z-index mais alto */}
-          <Nav className="relative " />
+          <Nav />
 
           <div className=" flex flex-grow  ">
             <Main>
@@ -42,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
           {/* Renderiza o Console apenas em páginas específicas */}
           {!noConsoleRoutes.includes(router.pathname) && (
             <div className="relative  w-full flex justify-center">
-              <Console className="relative " />
+              <Console />
             </div>
           )}
         </div>

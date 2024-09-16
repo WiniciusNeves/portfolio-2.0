@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-900 h-full text-gray-300 p-6">
+    <div className="flex flex-col items-center justify-center bg-gray-900 h-full w-full text-gray-300 p-6" style={{ maxHeight: '85vh' }}>
       <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=999999&repeat=false&lines=Winicius+Neves" alt="Loading" className="w-96 h-auto" />
       <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6 mt-4 lg:mt-0">
         {/* Esconder a imagem no celular */}

@@ -4,7 +4,7 @@ export default function Curriculum() {
 
     return (
         <div className="flex flex-col items-center justify-center bg-gray-900 h-full text-gray-300 p-6 hover:border-sky-300">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full max-w-screen-md" style={{ height: "75vh" }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full max-w-screen-md" style={{ height: "70vh" }}>
                 {/* Coluna da Esquerda */}
                 <div className="bg-gray-800 p-4 rounded-lg h-full overflow-hidden hover:overflow-y-scroll transition-all duration-300">
                     <div className="text-white text-2xl mb-4">Curriculum</div>

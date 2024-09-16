@@ -4,7 +4,7 @@ import { VscCode, VscHome, VscFileCode, VscRepo, VscAccount } from "react-icons/
 export default function Nav() {
     return (
         <nav className="w-full md:w-auto h-auto overflow-y-auto md:overflow-y-visible scrollbar-hide">
-            <div className="flex space-x-4 items-center">
+            <div className="flex space-x-4 items-center ">
                 <NavAbas
                     propagateServerField={{
                         name: "Home",
