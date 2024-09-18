@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaStar, FaCodeBranch, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
+// Definindo a interface para o repositório
 interface Repository {
     id: number;
     name: string;
@@ -15,26 +16,28 @@ interface Repository {
 }
 
 export default function Github() {
-    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+    const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN || '';
+
     const [repos, setRepos] = useState<Repository[]>([]);
     const [loadingLanguages, setLoadingLanguages] = useState(false);
-
+    
     useEffect(() => {
         const fetchRepos = async () => {
             try {
                 const repoResponse = await axios.get('https://api.github.com/users/winiciusneves/repos', {
                     headers: {
-                        Authorization: `token ${GITHUB_TOKEN}`,
+                        Authorization: `token ${GITHUB_TOKEN}`, // Use a variável de ambiente
                     },
                 });
                 const repoData: Repository[] = repoResponse.data;
                 setRepos(repoData);
 
+                // Carregar as linguagens de cada repositório de forma assíncrona
                 setLoadingLanguages(true);
                 const reposWithLanguages = await Promise.all(repoData.map(async (repo) => {
                     const languageResponse = await axios.get(repo.languages_url, {
                         headers: {
-                            Authorization: `token ${GITHUB_TOKEN}`,
+                            Authorization: `token ${GITHUB_TOKEN}`, // Use a variável de ambiente
                         },
                     });
                     return { ...repo, languages: Object.keys(languageResponse.data) || [] };
@@ -48,7 +51,7 @@ export default function Github() {
         };
 
         fetchRepos();
-    }, [GITHUB_TOKEN]);
+    }, [GITHUB_TOKEN]); // Adiciona GITHUB_TOKEN como dependência
 
     return (
         <section className="bg-gray-900 py-16 overflow-y-scroll" style={{ maxHeight: "87vh" }}>
@@ -58,14 +61,17 @@ export default function Github() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {repos.map(repo => (
                         <div key={repo.id} className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                            {/* Título e link para o GitHub */}
                             <h3 className="text-xl font-semibold text-white mb-4">
                                 <a href={repo.html_url} className="hover:text-blue-400" target="_blank" rel="noopener noreferrer">
                                     {repo.name} <FaGithub className="inline-block ml-2" />
                                 </a>
                             </h3>
 
+                            {/* Descrição do projeto */}
                             <p className="text-gray-400 mb-4">{repo.description}</p>
 
+                            {/* Verifica se há linguagens antes de usar o .map() */}
                             {loadingLanguages ? (
                                 <p className="text-gray-400 mb-4">Loading languages...</p>
                             ) : repo.languages && repo.languages.length > 0 ? (
@@ -80,13 +86,15 @@ export default function Github() {
                                 <p className="text-gray-400 mb-4">No language specified</p>
                             )}
 
+                            {/* Stars e Forks */}
                             <div className="flex justify-between items-center text-gray-400 text-sm">
                                 <span><FaStar className="inline-block mr-1" /> {repo.stargazers_count}</span>
                                 <span><FaCodeBranch className="inline-block mr-1" /> {repo.forks_count}</span>
                             </div>
 
+                            {/* Botões para ver código e site */}
                             <div className="mt-4 flex justify-between">
-                                <a href={repo.html_url} className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center mr-5" target="_blank" rel="noopener noreferrer">
+                                <a href={repo.html_url} className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center" target="_blank" rel="noopener noreferrer">
                                     View Code <FaGithub className="ml-2" />
                                 </a>
                                 {repo.homepage && (
@@ -102,3 +110,4 @@ export default function Github() {
         </section>
     );
 }
+
