@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Custom404 = () => {
     return (
         <div className="flex flex-col items-center justify-center h-screen">
-            <img
+            <Image
                 src="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif"
                 alt="404 Image"
                 className=" "
@@ -20,3 +21,4 @@ const Custom404 = () => {
 };
 
 export default Custom404;
+

@@ -9,7 +9,7 @@ export default function Curriculum() {
                 <div className="bg-gray-800 p-4 rounded-lg h-full overflow-hidden hover:overflow-y-scroll transition-all duration-300">
                     <div className="text-white text-2xl mb-4">Curriculum</div>
                     <p className="flex items-center mb-4 text-sm">
-                        <span className="mr-2">🎓</span> Bachelor's in Computer Science
+                        <span className="mr-2">&apos;🎓&apos;</span> Bachelor's in Computer Science
                     </p>
 
                     <div className="mb-6">
@@ -29,17 +29,17 @@ export default function Curriculum() {
                     <div className="mb-6">
                         <h2 className="text-xl mb-2">Soft-skills:</h2>
                         <p className="flex items-center mb-4 text-sm">
-                            <span className="mr-2">💻</span>
+                            <span className="mr-2">&apos;💻&apos;</span>
                             <span>Responsible, Communicative, Disciplined, and always eager to learn</span>
                         </p>
 
                         <p className="flex items-center mb-4 text-sm">
-                            <span className="mr-2">📝</span>
+                            <span className="mr-2">&apos;📝&apos;</span>
                             <span>Good interpersonal skills and teamwork abilities</span>
                         </p>
 
                         <p className="flex items-center mb-4 text-sm">
-                            <span className="mr-2">🔍</span>
+                            <span className="mr-2">&apos;🔍&apos;</span>
                             <span>Proactive and always looking for improvement</span>
                         </p>
                     </div>
@@ -79,11 +79,11 @@ export default function Curriculum() {
 
                     <div className="mt-6">
                         <h2 className="text-2xl text-white mb-2">CONTACT</h2>
-                        <p>📍 Paraná, Curitiba, Bairro Alto</p>
-                        <p>📧 <a href="mailto:winiciusneves2004@hotmail.com" className="text-teal-400">winiciusneves2004@hotmail.com</a></p>
-                        <p>📱 (41) 999643460</p>
-                        <p>🔗 <a href="https://linktr.ee/winiciusneves" className="text-teal-400">linktr.ee/winiciusneves</a></p>
-                        <p>🐦 <a href="https://www.linkedin.com/in/winicius-neves/" className="text-teal-400">@winicius_neves</a></p>
+                        <p>&apos;📍&apos; Paraná, Curitiba, Bairro Alto</p>
+                        <p>&apos;📧&apos; <a href="mailto:winiciusneves2004@hotmail.com" className="text-teal-400">winiciusneves2004@hotmail.com</a></p>
+                        <p>&apos;📱&apos; (41) 999643460</p>
+                        <p>&apos;🔗&apos; <a href="https://linktr.ee/winiciusneves" className="text-teal-400">linktr.ee/winiciusneves</a></p>
+                        <p>&apos;🐦&apos; <a href="https://www.linkedin.com/in/winicius-neves/" className="text-teal-400">@winicius_neves</a></p>
                     </div>
                 </div>
             </div>
@@ -102,3 +102,4 @@ export default function Curriculum() {
         </div>
     );
 }
+

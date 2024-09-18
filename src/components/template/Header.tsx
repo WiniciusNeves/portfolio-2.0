@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -5,7 +6,12 @@ export default function Header() {
     return (
         <header className="header flex justify-between items-center bg-black border-gray-800 border-b p-2">
             <div className="flex items-center space-x-4 ml-2 hidden md:flex">
-                <img src="https://www.gkos.dev/vscode_icon.svg" className="w-7 h-6" alt="logo" />
+                <Image
+                    src="https://www.gkos.dev/vscode_icon.svg"
+                    alt="logo"
+                    width={28}
+                    height={21}
+                />
                 <nav className="flex space-x-3 text-gray-300 text-sm">
                     <span>File</span>
                     <span>Edit</span>
@@ -34,3 +40,5 @@ export default function Header() {
         </header>
     );
 }
+
+

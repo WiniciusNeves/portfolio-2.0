@@ -7,7 +7,7 @@ export default function Contact() {
             <div className="bg-white bg-opacity-80 p-4 sm:p-6 md:p-8 rounded-md shadow-lg w-full sm:w-3/4 md:w-2/3 lg:w-1/2">
                 <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Contact</h1>
                 <p className="text-gray-800 text-base sm:text-lg md:text-xl mb-4">
-                    If you have any questions, please don&apos;t hesitate to contact me.
+                    If you have any questions, please don&rsquo;t hesitate to contact me.
                 </p>
                 <p className="text-gray-900 text-lg sm:text-xl md:text-2xl mb-4">- Social</p>
 
@@ -41,3 +41,4 @@ export default function Contact() {
         </div>
     );
 }
+
