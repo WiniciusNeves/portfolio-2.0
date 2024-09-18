@@ -9,7 +9,7 @@ export default function Curriculum() {
                 <div className="bg-gray-800 p-4 rounded-lg h-full overflow-hidden hover:overflow-y-scroll transition-all duration-300">
                     <div className="text-white text-2xl mb-4">Curriculum</div>
                     <p className="flex items-center mb-4 text-sm">
-                        <span className="mr-2">&apos;🎓&apos;</span> Bachelor's in Computer Science
+                        <span className="mr-2">&apos;🎓&apos;</span> Bachelor&apos;s in Computer Science
                     </p>
 
                     <div className="mb-6">
@@ -102,4 +102,3 @@ export default function Curriculum() {
         </div>
     );
 }
-

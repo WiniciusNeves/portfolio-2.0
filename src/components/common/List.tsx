@@ -9,14 +9,14 @@ interface BoxProps {
   };
 }
 
-interface ListProps<T> {
+interface ListProps {
   propagateServerField: {
     title: string;
   };
   children: React.ReactElement<BoxProps>[];
 }
 
-export default function List<T>({ propagateServerField, children }: ListProps<T>) {
+export default function List({ propagateServerField, children }: ListProps) {
   return (
     <div className="w-full max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl 2xl:max-w-screen-2xl border border-gray-700 rounded-lg p-4 bg-gray-900 overflow-hidden">
       <h2 className="text-gray-500 text-2xl mb-4 text-center">{propagateServerField.title}</h2>
@@ -28,4 +28,5 @@ export default function List<T>({ propagateServerField, children }: ListProps<T>
     </div>
   );
 }
+
 
