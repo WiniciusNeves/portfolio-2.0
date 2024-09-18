@@ -15,7 +15,7 @@ interface Repository {
 }
 
 export default function Github() {
-    const GITHUB_TOKEN = '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';
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     const [repos, setRepos] = useState<Repository[]>([]);
     const [loadingLanguages, setLoadingLanguages] = useState(false);
 
@@ -102,4 +102,3 @@ export default function Github() {
         </section>
     );
 }
-
