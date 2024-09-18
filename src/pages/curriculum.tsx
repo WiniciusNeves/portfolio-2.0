@@ -48,13 +48,13 @@ export default function Curriculum() {
                 {/* Coluna da Direita */}
                 <div className="bg-gray-800 p-3 rounded-lg h-full overflow-hidden hover:overflow-y-scroll transition-all duration-300">
                     <h1 className="text-4xl text-white">WINICIUS DA SILVA NEVES</h1>
-                    <h2 className="text-xl text-teal-400 mb-4">Bachelor's in Computer Science</h2>
+                    <h2 className="text-xl text-teal-400 mb-4">Bachelor&apos;s in Computer Science</h2>
                     <p className="mb-6">I am a student focused on Web Development, constantly looking to improve my skills in website creation. Dedicated to technical excellence, I am always learning to develop robust and secure solutions.</p>
 
                     <div className="mb-6">
                         <h2 className="text-2xl text-white mb-2">EDUCATION</h2>
                         <div className="border-b border-gray-600 pb-4 mb-4">
-                            <h3 className="text-lg">Bachelor's in Computer Science - University of Curitiba</h3>
+                            <h3 className="text-lg">Bachelor&apos;s in Computer Science - University of Curitiba</h3>
                             <span className="text-sm text-gray-400">2023-2025</span>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ export default function Curriculum() {
             <div className="mt-5">
                 <a
                     href="/img/Winicius-Neves-curriculum.pdf"
-                    download={'Winicius-Neves-curriculum.pdf'}
+                    download="Winicius-Neves-curriculum.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-teal-500 text-white p-2 rounded-lg hover:bg-teal-600 transition"
