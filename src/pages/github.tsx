@@ -15,7 +15,7 @@ interface Repository {
 }
 
 export default function Github() {
-    const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
     const [repos, setRepos] = useState<Repository[]>([]);
     const [loadingLanguages, setLoadingLanguages] = useState(false);
 
