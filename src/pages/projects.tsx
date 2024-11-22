@@ -51,6 +51,14 @@ export default function Project() {
                             link: "https://github.com/WiniciusNeves/UniSearch",
                         }}
                     />
+                    <Box
+                        propagateServerField={{
+                            title: "RAPA - Ticket Management App",
+                            content: "A React Native app with Firebase to manage IT tickets and monitor ticket volumes by region, improving support efficiency.",
+                            link: "https://github.com/WiniciusNeves/tickes",
+                        }}
+                    />
+
                 </List>
 
                 <List propagateServerField={{ title: "Python Projects" }}>
