@@ -58,6 +58,13 @@ export default function Project() {
                             link: "https://github.com/WiniciusNeves/tickes",
                         }}
                     />
+                    <Box
+                        propagateServerField={{
+                            title: "Project Favella",
+                            content: "A React Native app with Nest.js to help communities find job opportunities.",
+                            link: "https://github.com/WiniciusNeves/project_FACILITA",
+                        }}
+                    />
 
                 </List>
 

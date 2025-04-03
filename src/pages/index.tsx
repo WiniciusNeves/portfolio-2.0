@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-900 h-full w-full text-gray-300 p-6" style={{ maxHeight: '85vh' }}>
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=999999&repeat=false&lines=Winicius+Neves" alt="Loading" className="w-96 h-auto" />
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=999999&repeat=false&lines=Winicius+Neves" alt="Loading" className="w-96 h-auto" width={500} height={100}/>
       <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6 mt-4 lg:mt-0">
         {/* Esconder a imagem no celular */}
         <div className="hidden lg:flex flex-col items-center space-y-2 w-1/4">
@@ -22,6 +22,8 @@ const Home = () => {
             src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=21&duration=4500&pause=1000&color=5DBB9B&center=false&vCenter=true&repeat=false&random=false&width=435&lines=Majoring+in+Computer+Science"
             alt="Typing SVG"
             className="self-center lg:self-start mb-4 w-96 h-auto"
+            width={435}
+            height={100}
           />
           <h3 className="text-lg">Hard Skills:</h3>
           <div className="flex flex-col mt-2 space-y-2">
@@ -70,3 +72,4 @@ const Home = () => {
 };
 
 export default Home;
+
